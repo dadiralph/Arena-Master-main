@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: white; /* Light background */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distributes items: left, center, right */
+    align-items: center;
+    padding: 30px 50px;
+    position: relative;
+   
+}
+
+.center-container {
+    display: flex;
+    align-items: center; /* Aligns logo and text vertically */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the container */
+}
+
+.logo img {
+    width: 40px; /* Adjust the logo size */
+    height: auto; /* Keeps aspect ratio */
+    margin-right: 0px 10px; /* Space between logo and text */
+}
+
+.Master {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 100px;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    left: 30px; /* Pushes the nav-links to the left */
+    font-weight: bold;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+    position: relative; /* Ensures the underline stays inside each list item */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: rgb(36, 34, 34);
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative; /* Needed for positioning the underline */
+    transition: color 0.3s;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Places the underline just below the text */
+    width: 0%; /* Starts with no width */
+    height: 3px;
+    background-color:rgb(9, 19, 7); /* color underline */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: #0948bd; /* Changes text color on hover */
+}
+
+.nav-menu a:hover::after {
+    width: 100%; /* Expands only under the hovered item */
+    left: 0; /* Adjusts position to align correctly */
+}
+
+
+.nav-button .buynow-btn {
+    width: 130px;
+    height: 40px; /* Slightly increased for better appearance */
+    position: absolute;
+    right: 100px; /* Positions "Buy Now" button on the right */
+    font-size: 16px;
+    font-weight: 500;
+    background: rgba(44, 42, 42, 0.4);
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;  /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    cursor: pointer;
+    color: rgb(13, 97, 112); /* Ensures text is visible */
+    text-transform: uppercase; /* Optional: Makes text uppercase */
+}
+
+
