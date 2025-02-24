@@ -125,6 +125,8 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
+    
 }
 
 /* Image styling */
@@ -133,12 +135,24 @@ body{
     width: auto;
     object-fit: contain;
     margin-top: -3rem; /* Moves image even more upwards */
+    animation: scale-up 1.5s ease-in-out alternate infinite;
 }
+
+@keyframes scale-up {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}
+
+
 
 /* Feature words positioned below the image */
 .feature-words {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: rgb(21, 22, 22);
     margin-top: -3rem; /* Ensures it stays right below the image */
@@ -147,7 +161,7 @@ body{
 
 .feature-words span {
     font-size: 1.5rem;
-    color: #08f0f0;
+    color: #d81c1c;
 }
 
 /* collum 2*/
