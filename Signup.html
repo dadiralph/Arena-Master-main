@@ -21,7 +21,7 @@
         </h1>
         <nav class="nav">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -31,18 +31,87 @@
 
     <!--login-->
     <div class="form-container">
+      <!--Collum 1-->
       <div class="col col-1">
-        <img src="images/space.png" class="space" alt="space" />
         <div class="image">
           <img src="images/astros.png" class="astros" alt="astro" />
-          
         </div>
         <p class="feature-words">
-          Turn your <span>IDEAS</span> into <span>REALITY</span>.
+          <span>Join Us & Bring Your Ideas to Life!</span>
           <br />
-          Start for free and get attractive offers from the community
+          Sign up for free and unlock exclusive opportunities within our
+          community.
         </p>
       </div>
+      <!--Collum 2-->
+
+      <div class="col col-2">
+        <div class="login-form">
+          <!--sign up logo-->
+          <div class="form-title">Creat <span>Account</span></div>
+          <!--input fields-->
+          <div class="input-field">
+            <input type="email" placeholder="Email" required />
+            <i class="bx bx-envelope icon"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Username" required />
+            <i class="bx bx-user icon"></i>
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <i class="bx bx-lock-alt icon"></i>
+            <i
+              class="bx bx-low-vision toggle-password"
+              onclick="togglePassword(this)"
+            ></i>
+            <!-- Eye icon -->
+          </div>
+
+          <div class="input-field">
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              required
+            />
+            <i class="bx bx-lock-alt icon"></i>
+            <i
+              class="bx bx-low-vision toggle-password"
+              onclick="togglePassword(this)"
+            ></i>
+            <!-- Eye icon -->
+          </div>
+
+          <div class="submit-btn">
+            <button class="submit" type="submit">Sign Up</button>
+          </div>
+          <!--Icon-->
+          <div class="social-icons">
+            <i class="bx bxl-google"></i>
+            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-pinterest"></i>
+          </div>
+          <div class="login-here">
+            Already have an account? <a href="Login.html">Login</a>
+          </div>
+
+          <div class="terms">
+            * By signing up, you agree to our <a href="#">Terms of Use</a> and
+            acknowledge you've read our Privacy Policy <br />
+            This site is protected by reCAPTCHA Enterprise.
+            <a href="#">Google's Privacy Policy</a> and
+            <a href="#">Terms of Service</a> apply.
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="Java/sign-up.js"></script>
   </body>
 </html>

@@ -1,7 +1,6 @@
-function togglePassword() {
-    let passwordField = document.getElementById("password");
-    let icon = document.querySelector(".toggle-password");
-
+function togglePassword(icon) {
+    let passwordField = icon.closest(".input-field").querySelector("input"); // Selects the input field in the same container
+    
     if (passwordField.type === "password") {
         passwordField.type = "text";
         icon.classList.replace("bx-low-vision", "bx-show"); // Change icon when visible
@@ -10,4 +9,3 @@ function togglePassword() {
         icon.classList.replace("bx-show", "bx-low-vision"); // Change icon when hidden
     }
 }
-
