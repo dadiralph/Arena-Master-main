@@ -22,7 +22,9 @@ body{
     top: 0;
     left: 0;
     z-index: 100;
-    border-bottom: 1px solid #ddd;
+    backdrop-filter: blur(0.1px);
+    box-shadow: 0 2px 4px rgba(221, 215, 215, 0.1);
+    border: none;
 }
 
 /* Header Container */
@@ -41,6 +43,7 @@ body{
     font-weight: bold;
     color: #1d2b53;
     margin: 0;
+    cursor: pointer;
 }
 
 /* Navigation */
@@ -181,7 +184,17 @@ body{
 .bgplnt{
     position: absolute;
     z-index: -1;
-    opacity: 0.7;
+    opacity: 0.8;
+    animation: scale-up 1.5s ease-in-out alternate infinite;
+}
+
+@keyframes scale-up {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(10px);
+    }
 }
 
 
@@ -273,11 +286,20 @@ body{
 .bgaut{
     position: absolute;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.8;
     right: 10%;
     rotate: 30px;
-    top: 53rem;
-    
+    top: 52rem;
+    animation: scale-up 1.5s ease-in-out alternate infinite;
+}
+
+@keyframes scale-up {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(10px);
+    }
 }
 
 /* Responsive adjustments (example) */
@@ -352,13 +374,20 @@ body{
 }
 
 .comets {
-
     position: absolute;
     z-index: -1;
     opacity: 0.2;
-    transform: rotate(180deg);
-    
-    
+    animation: move-left-right 3.5s ease-in-out alternate infinite;
+    top:90rem;
+}
+
+@keyframes move-left-right {
+    from {
+        transform: translateX(0);  /* Start at original position */
+    }
+    to {
+        transform: translateX(30px); /* Move 50px to the right */
+    }
 }
 
 
@@ -443,7 +472,16 @@ body{
     width: 130%;
     height: 120%;
     object-fit: fill; 
+    animation: scale-up 1.8s ease-in-out alternate infinite;
+}
 
+@keyframes scale-up {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(10px);
+    }
 }
 
 

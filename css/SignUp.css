@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+body{
+    
+
+    background-image: url(../images/bgs.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+
+/*navbar*/
+
+/* Header Styling */
+.header {
+    
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(0.1px);
+    
+}
+
+/* Header Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #b3c1e7;
+    margin: 0;
+    cursor: pointer;
+    position: absolute; /* Position the logo in the top-left */
+    left: 320px; /* Adjust left position */
+    
+}
+
+.nav {
+    width: 100%; /* Allow full width for nav */
+    display: flex;
+    justify-content: center; /* Center the navigation */
+}
+
+/* Navigation */
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #b3c1e7;
+    font-size: 25px;
+    transition: 0.1s;
+}
+
+.nav ul li a:hover {
+    color: #c41fa0;
+    border-bottom: 3px solid black;
+}
+
+/* End of navbar */
+
+.form-container{
+    width: 80rem;
+    height: 45rem;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    display: flex;  /* Makes sure child elements align properly */
+    overflow: hidden; /* Prevents content from overflowing */
+    flex-direction: row-reverse; /* Moves .col-1 to the right */
+    
+}
+
+.col-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);    
+    border-radius: 90% 0% 0% 0;
+    position: relative; /* Needed for absolute positioning of space */
+    overflow:hidden; /* Ensures space doesn't go outside the border */
+    
+}
+
+.image {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    position: relative;   
+}
+
+/* Image styling */
+.astros {
+    height: 30rem;  
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem; /* Moves image even more upwards */
+    animation: scale-up 1.5s ease-in-out alternate infinite;
+}
+
+@keyframes scale-up {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}
+
+.space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill; /* Ensures it fills col-1 */
+    opacity: 0.6; /* Adjust for visibility */
+    z-index: -1; /* Keeps it in the background */
+    animation: scale-up 4s ease-in-out alternate infinite;
+    
+}
+
+@keyframes scale-up {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(17px);
+    }
+}
+
+
+
+/* Feature words positioned below the image */
+.feature-words {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(21, 22, 22);
+    margin-bottom:-6rem; /* Ensures it stays right below the image */
+    width: 80%;
+}
+
+.feature-words span {
+    font-size: 1.5rem;
+    color: #5cd0fd;
+}
+
