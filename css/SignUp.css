@@ -97,6 +97,7 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 20px;
     backdrop-filter: blur(30px);
+    
     display: flex;  /* Makes sure child elements align properly */
     overflow: hidden; /* Prevents content from overflowing */
     flex-direction: row-reverse; /* Moves .col-1 to the right */
@@ -109,11 +110,11 @@ body{
     align-items: center;
     flex-direction: column;
     width: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(30px);    
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);    
     border-radius: 90% 0% 0% 0;
     position: relative; /* Needed for absolute positioning of space */
-    overflow:hidden; /* Ensures space doesn't go outside the border */
+   
     
 }
 
@@ -122,16 +123,19 @@ body{
     justify-content:center;
     align-items: center;
     width: 100%;
-    position: relative;   
+       
 }
 
 /* Image styling */
 .astros {
-    height: 30rem;  
+    height: 40rem;  
     width: auto;
     object-fit: contain;
-    margin-bottom: 1rem; /* Moves image even more upwards */
-    animation: scale-up 1.5s ease-in-out alternate infinite;
+    margin-top: 5rem;
+    animation: scale-up 3s ease-in-out alternate infinite;
+    rotate: 7deg;
+    left: 5%;
+    position: relative; 
 }
 
 @keyframes scale-up {
@@ -143,29 +147,6 @@ body{
     }
 }
 
-.space {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit:fill; /* Ensures it fills col-1 */
-    opacity: 0.6; /* Adjust for visibility */
-    z-index: -1; /* Keeps it in the background */
-    animation: scale-up 4s ease-in-out alternate infinite;
-    
-}
-
-@keyframes scale-up {
-    from{
-        transform: translateY(0);
-    }
-    to{
-        transform: translateY(17px);
-    }
-}
-
-
 
 /* Feature words positioned below the image */
 .feature-words {
@@ -173,7 +154,7 @@ body{
     font-size: 1.2rem;
     font-weight: bold;
     color: rgb(21, 22, 22);
-    margin-bottom:-6rem; /* Ensures it stays right below the image */
+    margin-bottom: 9rem; /* Ensures it stays right below the image */
     width: 80%;
 }
 
@@ -182,3 +163,220 @@ body{
     color: #5cd0fd;
 }
 
+/* form Collum 2 */
+
+.col-2 {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;     /* Center content horizontally */
+    justify-content: center; /* Align items to the top */
+    width: 50%;
+}
+
+.form-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f3f3f3;
+    margin-bottom: 1.7rem; /* Space between title and input field */
+    text-align: center;
+    margin-right: 30px; 
+}
+
+.form-title span{
+    color: #d85bf1;
+}
+
+.input-field {
+    margin: 10px 0;
+    position: relative; /* Make this the reference for absolute positioning */
+    display: flex;
+    align-items: center;
+    width: 70%;
+    left:13%
+}
+.input-field input {
+    width: 100%;
+    padding: 12px 40px 12px 45px; /* Add left padding for icon space */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.icon {
+    position: absolute;
+    left: 15px;
+    color: #080808;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    left:13%
+   
+}
+
+.submit{
+    
+    width: 70%;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    background: #d535f5;
+    color: #f3f3f3;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.submit:hover {
+    background: #f3f3f3;
+    color: #d85bf1;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px; /* Positions the icon inside the input box */
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #d2d6d6;
+    transition: color 0.3s ease;
+    
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between icons */
+    margin-top: 15px; /* Adjust spacing as needed */
+    width: 100%;
+    flex-wrap: wrap;  /* Allows icons to wrap instead of overlapping */
+    position: relative;
+    left: -1%;
+}
+
+.social-icons i {
+    font-size: 1.8rem; /* Adjust icon size */
+    color: #2a73fc; /* Icon color */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: #f3f3f3;
+}
+
+.login-here{
+    color: #f3f3f3;
+    font-size: 12px;
+    margin-top: 15px; 
+    left:32%;
+    position: relative;
+}
+
+.login-here a {
+    text-decoration: underline;
+    color: #e06868;
+    font-size: 12px;
+}
+
+.login-here a:hover {
+    color: #0741d6;
+}
+
+.terms {
+    color: #f3f3f3;
+    font-size: 11px;
+    margin-top: 30px;
+}
+.terms a {
+    text-decoration: underline;
+    color: #8cebeb;
+    font-size: 12px;
+}
+
+
+/* RESPONSIVENESS */
+
+/* Tablets & Small Screens */
+@media screen and (max-width: 768px) {
+    .logo {
+        left: 20px;
+        font-size: 25px;
+    }
+
+    .nav ul li a {
+        font-size: 18px;
+    }
+
+    .form-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .col-1,
+    .col-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .astros {
+        max-height: 250px;
+    }
+
+    .feature-words {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin: 5px 0;
+    }
+
+    .form-container {
+        width: 95%;
+    }
+
+    .form-title {
+        font-size: 2rem;
+    }
+
+    .input-field input {
+        font-size: 0.9rem;
+        padding: 12px 35px 12px 40px;
+    }
+
+    .submit {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .social-icons {
+        gap: 10px; /* Reduce space slightly */
+    }
+
+    .social-icons i {
+        font-size: 1.5rem; /* Reduce icon size on smaller screens */
+    }
+
+    .icon, .toggle-password {
+        font-size: 1rem; /* Reduce icon size */
+    }
+}

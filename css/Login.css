@@ -113,7 +113,7 @@ body{
     align-items: center;
     flex-direction: column;
     width: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(30px);    
     border-radius: 0 90% 0% 0;
     transition: border-radius 0.3s;
