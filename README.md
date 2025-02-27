@@ -5,8 +5,8 @@
 
 This project is a interactive frontend login/signup page built using HTML, CSS, and JavaScript. It features a clean UI design, smooth animations, and user-friendly form validation. The page includes:
 
--Login & Signup Forms with input validation
--Eye Icon for Password Toggle (Show/Hide Password)
--Smooth Animations (button hover, form transitions)
+-Login & Signup Forms with input validation <br>
+-Eye Icon for Password Toggle (Show/Hide Password)<br>
+-Smooth Animations (button hover, form transitions)<br>
 
 This project is ideal for beginners to practice frontend development and can be integrated into larger web applications. 🚀
