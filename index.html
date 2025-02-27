@@ -21,9 +21,9 @@
         <h1 class="logo">Master Arena</h1>
         <nav class="nav">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#footer">Contact</a></li>
           </ul>
         </nav>
         <div class="button-nav">
@@ -61,7 +61,7 @@
           commodo ligula eget dolor.
         </p>
         <div class="buttons">
-          <button class="btn btn-primary">Purchase $19</button>
+          <button class="btn btn-primary" id="learnMoreBtn">Purchase $19</button>
           <button class="btn btn-secondary">Learn More</button>
         </div>
       </div>
@@ -70,6 +70,21 @@
         <img src="images/set.png" alt="Product Illustration" />
       </div>
     </section>
+
+    <!-- Modal Structure -->
+    <div id="learnMoreModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Purchase Now for as low as $19</h2>
+        <p>
+          Secure your product today and enjoy its amazing benefits.
+        </p>
+        <img src="images/lothars.jpg" alt="Product Image" style="width: 100%; max-width: 300px; margin-bottom: 15px;" />
+        <br><br>
+        <button class="buybtn" id="buyNowBtn">Buy Now</button>
+      </div>
+    </div>
+
     <!--END of the 1st part of landing page-->
 
     <div class="bgaut">
@@ -181,7 +196,7 @@
 
     <!--footer part of landing page-->
 
-    <footer class="footer">
+    <footer class="footer" >
       <div class="container">
         <div class="footer-content">
           <!-- Left Section (Logo & Contact Info) -->
@@ -191,7 +206,7 @@
               Funding freemium long tail hypotheses<br />
               first mover advantage assets ownership
             </p>
-            <div class="contact-info">
+            <div class="contact-info" id="footer">
               <p><i class="bx bx-envelope"></i> rlphclmnte@gmail.com</p>
               <p><i class="bx bx-phone"></i> +12 3456 7890</p>
             </div>
@@ -248,5 +263,6 @@
         </div>
       </div>
     </footer>
+    <script src="Java/Index.js"></script>
   </body>
 </html>
